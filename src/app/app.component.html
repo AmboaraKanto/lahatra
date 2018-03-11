@@ -1,33 +1,5 @@
-<!--<nav class="indigo darken-4">
-  <div class="nav-wrapper">
-    <a *ngIf="lahatra" href="#" class="left page-title white-text"><img src="{{ logo.name }}" alt="{{lahatra.name | uppercase}}"/></a>
-
-    <a materialize="sideNav" [materializeParams]="sidenavParams" [materializeActions]="sidenavActions"
-    data-activates="nav-mobile" class="button-collapse hide-on-large-only">
-      <i class="material-icons grey-text">menu</i>
-    </a>
-    <ul class="right hide-on-med-and-down"> 
-      <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="white-text" [routerLink]="menuItem.route">{{ menuItem.name | uppercase }}</a></li>
-    </ul>
-
-    <ul id="nav-mobile" class="side-nav">
-      <li *ngFor="let menuItem of menuItems" routerLinkActive="active"><a class="white-text" [routerLink]="menuItem.route">{{ menuItem.name | uppercase }}</a></li>
-      <div class="divider">
-
-      </div>
-    </ul>
-    <form class="left" style="width:85em; margin:0 1em">
-      <div class="input-field">
-        <input id="search" type="search" required>
-        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-        <i class="material-icons">close</i>
-      </div>
-    </form>
-
-  </div>
-</nav>-->
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a *ngIf="lahatra" href="#" class="navbar-brand"><img src="{{ logo.name }}" alt="{{lahatra.name | uppercase}}"/></a>
+  <a routerLink="/home" class="navbar-brand"><img src="{{ logo.name }}" alt="{{lahatra.name | uppercase}}"/></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -51,7 +23,7 @@
         </div>
       </li>
     </ul>-->
-    <form class="navbar-form mr-auto" action="/action_page.php" style="width:50em; margin-left:15em;">
+    <form class="navbar-form mr-auto" action="/action_page.php" style="width:65em; margin-left:15em;">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Search" name="search">
         <div class="input-group-btn">
@@ -64,12 +36,34 @@
     <ul class="nav navbar-nav navbar-right">
       <li *ngFor="let menuItem of menuItems" routerLinkActive="active">
         <a class="nav-link" [routerLink]="menuItem.route">
-          <!--<span class="fa fa-user"></span>--> {{ menuItem.name }}
+          <span class="{{ menuItem.icon }}"></span> {{ menuItem.name }}
         </a>
       </li>
     </ul>
   </div>
 </nav>
-<app-home></app-home>
+
+<!--<div class="inner" ng-view>
+
+</div>
+
+<script type="text/javascript" src="../assets/js/please-wait.min.js"></script>
+
+<script type="text/javascript">
+
+  window.loading_screen = window.pleaseWait({
+
+    logo: "../assets/img/logo.png",
+
+    backgroundColor: '#f46d3b',
+      loadingHtml: "<div class='sk-spinner sk-spinner-wave'><div class='sk-rect1'></div><div class='sk-rect2'></div><div class='sk-rect3'></div><div class='sk-rect4'></div><div class='sk-rect5'></div></div>"
+    //loadingHtml: "<p class='loading-message'>A good day to you fine user!</p>"
+
+  });
+
+</script>
+
+<script src="../assets/js/default.min.js"></script>-->
+
 
 <router-outlet></router-outlet>

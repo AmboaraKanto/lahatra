@@ -16,8 +16,8 @@ export class AppComponent {
     this.sidenavParams = [];
 
     this.menuItems = [
-          { name: "Inscription", route: "/inscription" },
-          { name: "Connexion", route: "/connexion" }
+          { name: "Inscription", route: "/inscription", icon:"fa fa-user" },
+          { name: "Connexion", route: "/connexion", icon:"fa fa-sign-in" }
       ];
   }
 
@@ -29,4 +29,5 @@ export interface MenuItem {
 
   name: string;
   route: string;
+  icon: string;
 }

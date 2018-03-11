@@ -20,10 +20,11 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../src/assets/css/font-awesome.css"
+        "../src/assets/css/font-awesome.css",
+        "../src/assets/css/please-wait.css"
       ],
       "scripts": [
-        
+        "../src/assets/js/please-wait.js"        
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
