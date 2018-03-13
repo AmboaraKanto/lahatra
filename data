@@ -1,0 +1,7 @@
+db.video.insert({
+    id: "f6GHAbenqvM",
+    titre: "Dans le noir",
+    artiste: "Diam's",
+    date: new Date(2009,11,10),
+    description: "Chanson rap"
+});

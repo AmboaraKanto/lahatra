@@ -1,3 +1,5 @@
+import { Video } from './../../models/video';
+import { VideoService } from './../../services/video.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,7 +9,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./video.component.css']
 })
 export class VideoComponent implements OnInit {
-
+  
+  video: Video;
+  titre:string;
+  lien:string;
+  artiste:string;
+  description:string;
   //constructor() { }
 
   constructor(private route: ActivatedRoute) { 
